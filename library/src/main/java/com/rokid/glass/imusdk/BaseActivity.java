@@ -32,8 +32,6 @@ public abstract class BaseActivity extends BaseInstructionActivity {
 
     @Override
     public boolean doReceiveCommand(String command) {
-        if (BuildConfig.DEBUG) {
-        }
         return false;
     }
 

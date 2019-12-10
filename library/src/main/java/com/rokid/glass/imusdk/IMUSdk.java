@@ -2,7 +2,6 @@ package com.rokid.glass.imusdk;
 
 import android.app.Activity;
 import android.app.Application;
-import android.content.Context;
 import android.content.Intent;
 
 import com.rokid.glass.instruct.VoiceInstruction;
@@ -40,8 +39,8 @@ public class IMUSdk {
      * @param useDefaultGlobal 使用默认全局配置
      */
     public static void init(Application appContext, boolean useDefaultGlobal) {
-        getInstance().setmAppContext(appContext);
-        VoiceInstruction.init(getInstance().getmAppContext());
+        getInstance().setAppContext(appContext);
+        VoiceInstruction.init(getInstance().getAppContext());
         if (useDefaultGlobal)
             defaultGlobal();
     }
@@ -52,7 +51,7 @@ public class IMUSdk {
      * @param wakeupState
      */
     public static void setVoiceWakeupState(boolean wakeupState) {
-        Util.setVoiceWakeupState(getInstance().getmAppContext(), wakeupState);
+        Util.setVoiceWakeupState(getInstance().getAppContext(), wakeupState);
     }
 
 
@@ -93,11 +92,11 @@ public class IMUSdk {
 
     }
 
-    public Application getmAppContext() {
+    public Application getAppContext() {
         return mAppContext;
     }
 
-    public void setmAppContext(Application mAppContext) {
+    public void setAppContext(Application mAppContext) {
         this.mAppContext = mAppContext;
     }
 
