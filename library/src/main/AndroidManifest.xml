@@ -1,2 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.rokid.glass.imusdk" />
+    package="com.rokid.glass.imusdk">
+
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+
+</manifest>
